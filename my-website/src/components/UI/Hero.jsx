@@ -1,5 +1,5 @@
 import React from "react";
-import heroImg from "../../assets/images/hero.svg";
+import heroImg from "../../assets/images/qobiljon.jpg";
 import CountUp from "react-countup";
 
 export const Hero = () => {
@@ -52,9 +52,15 @@ export const Hero = () => {
               <span>
                 <i class="ri-apps-2-line"></i>
               </span>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Exercitationem velit consectetur reiciendis quas commodi
-              voluptatibus voluptate accusamus inventore harum temporibus!
+              I am currently a junior front-end developer. I am engaged in the
+              preparation of the front part of websites and web applications.
+            </p>
+            <p
+              data-aos="fade-left"
+              data-aos-duration="1500"
+              className="flex gap-4 text-headingColor  font-[500] text-[15px] leading-7 sm:pl-14 sm:pr-10"
+            >
+              Men kichik front-end dasturchiman.Hozirda veb-saytlar va veb-ilovalarning old qismini tayyorlash bilan shug'ullanaman.
             </p>
             <div className="flex items-center gap-9 mt-14">
               <span className="text-smallTextColor font-[600] text-[15]">
@@ -96,45 +102,57 @@ export const Hero = () => {
           </div>
           <div className="basis-1/3 mt-10 sm:mt-0">
             <figure className="flex items-center justify-center">
-                <img src={heroImg} alt="hero img" />
+              <img className="rounded-[9999px]" src={heroImg} alt="hero img" />
             </figure>
           </div>
           <div className="md:basis-1/5 flex justify-between text-center mt-10 flex-wrap gap-3 md:mt-0 md:flex-col md:justify-end md:text-end">
-                <div className="mb-10">
-                    <h2 className="text-smallTextColor font-[700] text-[32]">
-                        <CountUp start={0} end={6} duration={2} suffix=" month +"/>
-                    </h2>
-                    <h4 className="text-smallTextColor font-[400] text-[18]">
-                        Years of Experience
-                    </h4>
-                </div>
+            <div className="mb-10">
+              <h2 className="text-smallTextColor font-[700] text-[32]">
+                <CountUp start={0} end={6} duration={2} suffix=" month +" />
+              </h2>
+              <h4 className="text-smallTextColor font-[400] text-[18]">
+                Years of Experience
+              </h4>
+              <h6 className="text-smallTextColor font-[300] text-[15px]">
+                Tajribam 6 oy +
+              </h6>
+            </div>
 
-                <div className="mb-10">
-                    <h2 className="text-smallTextColor font-[700] text-[32]">
-                        <CountUp start={0} end={80} duration={2} suffix="%"/>
-                    </h2>
-                    <h4 className="text-smallTextColor font-[400] text-[18]">
-                        Succes Rate
-                    </h4>
-                </div>
+            <div className="mb-10">
+              <h2 className="text-smallTextColor font-[700] text-[32]">
+                <CountUp start={0} end={80} duration={2} suffix="%" />
+              </h2>
+              <h4 className="text-smallTextColor font-[400] text-[18]">
+                Succes Rate
+              </h4>
+              <h6 className="text-smallTextColor font-[300] text-[15px]">
+                muvaffaqiyat darajasi
+              </h6>
+            </div>
 
-                <div className="mb-10">
-                    <h2 className="text-smallTextColor font-[700] text-[32]">
-                        <CountUp start={0} end={2} duration={2} suffix="+"/>
-                    </h2>
-                    <h4 className="text-smallTextColor font-[400] text-[18]">
-                        Happy Clients
-                    </h4>
-                </div>
+            <div className="mb-10">
+              <h2 className="text-smallTextColor font-[700] text-[32]">
+                <CountUp start={0} end={2} duration={2} suffix="+" />
+              </h2>
+              <h4 className="text-smallTextColor font-[400] text-[18]">
+                Happy Clients
+              </h4>
+              <h6 className="text-smallTextColor font-[300] text-[15px]">
+                Mamnun Mijozlar
+              </h6>
+            </div>
 
-                <div className="mb-10">
-                    <h2 className="text-smallTextColor font-[700] text-[32]">
-                        <CountUp start={0} end={20} duration={2} suffix="+"/>
-                    </h2>
-                    <h4 className="text-smallTextColor font-[400] text-[18]">
-                        Projects Complated
-                    </h4>
-                </div>
+            <div className="mb-10">
+              <h2 className="text-smallTextColor font-[700] text-[32]">
+                <CountUp start={0} end={20} duration={2} suffix="+" />
+              </h2>
+              <h4 className="text-smallTextColor font-[400] text-[18]">
+                Projects Complated
+              </h4>
+              <h6 className="text-smallTextColor font-[300] text-[15px]">
+                Yakunlangan Loyihalarim
+              </h6>
+            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import portfolioImg01 from "../images/portfolio-01.jpg";
+import portfolioImg01 from "../images/kindpng_1479811.png";
 import portfolioImg02 from "../images/portfolio-02.jpg";
 import portfolioImg03 from "../images/portfolio-03.jpg";
 import portfolioImg04 from "../images/portfolio-04.jpg";
@@ -11,11 +11,10 @@ const portfolios = [
     id: "01",
     imgUrl: portfolioImg01,
     category: "Web Design",
-    title: "Finance Technology Website",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium vitae sunt magnam numquam esse ipsam? Quis qui enim, temporibus dignissimos atque repellendus amet a velit. Dolorem quidem animi doloribus saepe!",
-    technologies: ["React", "Tailwind css", "Node.js", "MongoDB"],
-    siteUrl: "#",
+    title: "Analog Clock",
+    description:"This is an Analog Clock. Bu analog soat toza javascriptning o`zida yozilgan ilova",
+    technologies: ["Javascript", " Css", "HTML"],
+    siteUrl: "https://analog-cloak-by-qobiljon.netlify.app/",
   },
   {
     id: "02",
