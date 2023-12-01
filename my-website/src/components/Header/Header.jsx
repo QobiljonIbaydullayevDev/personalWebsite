@@ -1,4 +1,5 @@
 import React from "react";
+import resume from '../../assets/data/resumeData'
 
 export const Header = () => {
   return (
@@ -43,12 +44,20 @@ export const Header = () => {
                   Contact
                 </a>
               </li>
+              <li>
+                <a className="text-smallTextColor font-[600]" href={resume} download="resume">
+                  Resume
+                </a>
+              </li>
             </ul>
           </div>
           <div className="flex items-center gap-4">
             <button className="flex items-center gap-2 text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] max-h-[40px] hover:bg-smallTextColor hover:text-white hover:font-[500] ease-in-duraction-300">
-              <i class="ri-send-plane-line"></i>Let's Talk
+
+              <a href="https://t.me/Yoqubovich_2001"><i class="ri-send-plane-line"></i> Let's Talk</a>
+              
             </button>
+            
             <span className="text-2xl text-smallTextColor md:hidden cursor-pointer"><i class="ri-menu-line"></i></span>
           </div>
         </div>
