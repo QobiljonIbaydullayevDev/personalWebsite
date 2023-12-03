@@ -1,5 +1,5 @@
 import React from "react";
-import resume from '../../assets/data/resumeData'
+// import resume from '../../assets/data/resumeData'
 
 export const Footer = () => {
   return (
@@ -84,11 +84,11 @@ export const Footer = () => {
                   Contact
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a className="text-gray-400 font-[600]" href={resume} download="resume">
                   Resume
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
       </div>

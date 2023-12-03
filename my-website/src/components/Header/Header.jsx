@@ -1,9 +1,44 @@
-import React from "react";
+import React,{useRef,useEffect} from "react";
+
 import resume from '../../assets/data/resumeData'
 
 export const Header = () => {
+
+  const headerRef =useRef(null)
+  const menuRef =useRef(null)
+
+  const stickyHeaderFunc =()=>{
+    window.addEventListener('scroll', ()=>{
+      if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+        headerRef.current.classList.add('sticky__header')
+      }
+      else{
+        headerRef.current.classList.remove('sticky__header')
+      }
+    })
+  }
+
+  useEffect(()=>{
+    stickyHeaderFunc()
+    return window.removeEventListener('scroll',stickyHeaderFunc)
+  },[])
+
+  const handClick = e =>{
+    e.preventDefault()
+
+    const targetAttr = e.target.getAttribute('href');
+    const location = document.querySelector(targetAttr).offsetTop
+
+    window.scrollTo({
+      top : location -80,
+      left:0,
+    })
+  }
+
+  const toggleMenu =()=>menuRef.current.classList.toggle('show__menu')
+  
   return (
-    <header className="w-full h-[80px] leading-[80px] flex items-center">
+    <header ref={headerRef} className="w-full h-[80px] leading-[80px] flex items-center">
       <div className="container">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-[10px]">
@@ -22,31 +57,26 @@ export const Header = () => {
               </p>
             </div>
           </div>
-          <div className="menu">
+          <div className="menu" ref={menuRef} onClick={toggleMenu}>
             <ul className="flex items-center gap-10">
               <li>
-                <a className="text-smallTextColor font-[600]" href="#about">
+                <a onClick={handClick } className="text-smallTextColor font-[600]" href="#about">
                   About
                 </a>
               </li>
               <li>
-                <a className="text-smallTextColor font-[600]" href="#services">
+                <a onClick={handClick } className="text-smallTextColor font-[600]" href="#services">
                   Services
                 </a>
               </li>
               <li>
-                <a className="text-smallTextColor font-[600]" href="#portfolio">
+                <a onClick={handClick } className="text-smallTextColor font-[600]" href="#portfolio">
                   Portfolio
                 </a>
               </li>
               <li>
-                <a className="text-smallTextColor font-[600]" href="#contact">
+                <a onClick={handClick } className="text-smallTextColor font-[600]" href="#contact">
                   Contact
-                </a>
-              </li>
-              <li>
-                <a className="text-smallTextColor font-[600]" href={resume} download="resume">
-                  Resume
                 </a>
               </li>
             </ul>
@@ -54,11 +84,11 @@ export const Header = () => {
           <div className="flex items-center gap-4">
             <button className="flex items-center gap-2 text-smallTextColor font-[600] border border-solid border-smallTextColor py-2 px-4 rounded-[8px] max-h-[40px] hover:bg-smallTextColor hover:text-white hover:font-[500] ease-in-duraction-300">
 
-              <a href="https://t.me/Yoqubovich_2001"><i class="ri-send-plane-line"></i> Let's Talk</a>
+              <a href={resume} download="resume"><i class="ri-download-cloud-2-fill"></i> Resume</a>
               
             </button>
             
-            <span className="text-2xl text-smallTextColor md:hidden cursor-pointer"><i class="ri-menu-line"></i></span>
+            <span onClick={toggleMenu} className=" show__menu text-2xl text-smallTextColor md:hidden cursor-pointer"><i class="ri-menu-line"></i></span>
           </div>
         </div>
       </div>
